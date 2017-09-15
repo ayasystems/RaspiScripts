@@ -1,4 +1,4 @@
-#Autor Ángel / ayasystems
+#Autor Angel / ayasystems
 #
 # 
 #
@@ -46,8 +46,8 @@ GPIO.add_event_detect(BUTTON_SHUTDOWN,GPIO.BOTH,callback=button_shutdown)
 start = time.time()
 end   = time.time()
 
-print(start)
-print(end)
+#print(start)
+#print(end)
 
 while True:
 
