@@ -6,6 +6,7 @@ import syslog
 import time
 import RPi.GPIO as GPIO
 import atexit
+import os
 
 var = 1
 counter = 0
@@ -31,10 +32,10 @@ def button_shutdown(channel):
 #        print(elapsed)
         if ( elapsed>2 and elapsed < 5):# entre 2 y 5 segundos
              syslog.syslog("Raising reboot command")
-             os.system("sudo reboot")
+             os.system("sudo reboot now")
         if elapsed>=10:# mas de 10 segundos
              syslog.syslog("Raising shutdown command")
-             os.system("sudo shutdown")
+             os.system("sudo shutdown now")
 
 #print("GPIO VERSION: " + str(GPIO.VERSION))
 syslog.syslog("Shutdown button ->  GPIO: " + str(BUTTON_SHUTDOWN))
