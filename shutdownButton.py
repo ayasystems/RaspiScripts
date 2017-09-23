@@ -1,4 +1,4 @@
-#
+#Autor Angel EA4GKQ
 # 
 #
 import syslog
@@ -47,13 +47,13 @@ def button_shutdown(channel):
     global end
     if GPIO.input(BUTTON_SHUTDOWN) == 0:
         start = time.time()
-        print("pulsado")
+#        print("pulsado")
     if GPIO.input(BUTTON_SHUTDOWN) == 1:
-        print("libre")
+#        print("libre")
         end = time.time()
         elapsed = end - start
         print(elapsed)
-        if ( elapsed>0.2:# Pulsacion mayor a 0.2 segudos (evita rebotes/ruido)
+        if ( elapsed>0.2):# Pulsacion mayor a 0.2 segudos (evita rebotes/ruido)
              syslog.syslog("Raising shutdown command")
              os.system("sudo shutdown now")
 #             print("shutdown <10")
