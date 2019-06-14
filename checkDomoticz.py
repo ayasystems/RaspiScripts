@@ -4,14 +4,14 @@
 
 
 import json
-import urllib
+import urllib2
 import time
 import sys
 import os
 def checkDomoticz():
     url = 'http://localhost/json.htm?type=command&param=getversion'
     try:
-      output = json.load(urllib.urlopen(url))
+      output = json.load(urllib2.urlopen(url,timeout=10))
     except ValueError:
       return 0
     except IOError, e:
