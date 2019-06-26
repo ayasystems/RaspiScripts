@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #Script para reiniciar domoticz cuando se detecta que este deja de responder a peticiones HTTP
-#ajuste la URL según sus necesidades.
+#ajuste la URL segun sus necesidades.
 
 
 import json
