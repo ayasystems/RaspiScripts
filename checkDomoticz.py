@@ -1,6 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 #Script para reiniciar domoticz cuando se detecta que este deja de responder a peticiones HTTP
-#ajuste la URL segun sus necesidades.
+#ajuste la URL segun sus necesidades. IP+PUERTO o DOMINIO+PUERTO
+#Si es puerto 80 no es necesario indicar el puerto pero si no es 80 se debe indicar cual es
 
 
 import json
